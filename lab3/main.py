@@ -53,5 +53,5 @@ for block in encrypted_blocks:
     # Split decrypted block into 4 bytes
     result_bytes = bytearray([(res >> 24) & 0xFF, (res >> 16) & 0xFF, (res >> 8) & 0xFF, res & 0xFF])
 
-    # Decode decrypted bytes via WINDOWS-1251
-    print(result_bytes.decode("WINDOWS-1251"))
+    # Decode decrypted bytes using WINDOWS-1251 encoding
+    print(result_bytes.decode("WINDOWS-1251"), end="")
